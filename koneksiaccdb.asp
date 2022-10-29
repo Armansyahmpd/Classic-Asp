@@ -1,18 +1,18 @@
  <% 
  
- 'Contoh Koneksi Classic ASP dengan Access 2007 
+ 'Contoh Koneksi Classic ASP dengan Access 2007 (format accdb)
  'Oleh : Armansyah 
  
  Dim koneksi 
  Dim rekamdata 
  Dim databasenya 
+ Dim Sqlnya 
  
     databasenya= "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & _ Server.MapPath("database/accdb/07/test.accdb") 
     Set koneksi = Server.CreateObject("ADODB.Connection") 
     koneksi.open databasenya 
     Set rekamdata = Server.CreateObject("ADODB.Recordset") 
     
- Dim Sqlnya 
     Sqlnya = "select * from bukutamu" rekamdata.CursorLocation = 3 
     rekamdata.CursorType = 2 
     rekamdata.LockType = 3 
